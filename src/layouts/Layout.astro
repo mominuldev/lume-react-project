@@ -1,3 +1,12 @@
+---
+import '@/styles/globals.css'
+import Nav from '@/components/Nav.jsx'
+import Footer from '@/components/Footer.jsx'
+
+const { title } = Astro.props
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +14,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Lume</title>
+		<title>Lume - {title }</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-[#0D1D1C]">
+		<Nav />
+		<main class="min-h-[220px]">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
