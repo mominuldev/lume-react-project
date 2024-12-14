@@ -15,7 +15,7 @@ const Nav = () => {
 
 	return (
 		<>
-			<header className="pt-[58px] pb-[18px] md:py-10 relative">
+			<header className="pt-[58px] pb-[18px] md:py-10 absolute w-full top-0 left-0 z-40">
 				<div className="container">
 					<div className="flex justify-between items-center">
 						<div className="flex items-center gap-[50px] 2xl:gap-[100px]">

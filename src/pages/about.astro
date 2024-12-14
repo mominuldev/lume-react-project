@@ -1,9 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHeader from '@/components/PageHeader';
+import CallToAction from '@/components/CallToAction';
+import AboutSection from '@/components/AboutSection';
+
+import AboutImage from "../assets/about-1.png";
+import AboutImageTwo from "../assets/about-2.png";
+import AboutImageMobile from "../assets/about-mobile-1.png";
+import AboutImageMobileTwo from "../assets/about-mobile-2.png";
 ---
 
 <Layout title="About Lume">
-	<div class="container">
-		<h1 class="text-4xl font-bold text-white text-center">About Lume</h1>
-	</div>
+	<PageHeader 
+		title="Insanely huge file storage, with Lume" 
+		btnText="Get started →"
+		url="#"
+		secondaryBtnText="Learn more about Lume →"
+		secondaryUrl="#"
+	/>
+
+	<AboutSection
+		title="Re-defining Web3, for the users"
+		subtitle="Our Origin Story"
+		description="Bacik in 2007, making work better for people meant designing a simpler way to keep files in sync. Today, it means designing products that reduce busywork so you can focus on the work that matters."
+		imageUrl={AboutImage}
+		imgageMobileUrl={AboutImageMobile}
+		buttonText="Learn more →"
+		url="#"
+		
+	/>
+
+	<AboutSection
+		title="Re-defining Web3, for the users"
+		subtitle="Our Origin Story"
+		description="Bacik in 2007, making work better for people meant designing a simpler way to keep files in sync. Today, it means designing products that reduce busywork so you can focus on the work that matters."
+		imageUrl={AboutImageTwo}
+		imgageMobileUrl={AboutImageMobileTwo}
+		buttonText="Learn more →"
+		url="#"
+		theme="gray"
+		imagePosition="right"
+	/>
+
+	<CallToAction />
 </Layout>

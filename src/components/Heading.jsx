@@ -7,9 +7,9 @@ const Heading = ({
 	description,
 }) => {
 	return (
-		<div className={`mb-8 md:mb-[60px] ${align}`}>
+		<div className={`mb-5 lg:mb-[60px] sm:mb-8 ${align}`}>
 			<h2
-				className={`text-[28px] 2xl:text-[60px] md:text-5xl sm:text-4xl font-medium mb-3 md:mb-[36px] text-white leading-tight`}
+				className={`text-[28px] 2xl:text-[60px] md:text-5xl sm:text-4xl font-medium mb-3 lg:mb-[36px] text-white leading-tight`}
 			>
 				{title} <span className="underline">{highligtText}</span>
 			</h2>

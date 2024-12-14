@@ -5,14 +5,15 @@ import Heading from '@/components/Heading';
 import StorageCard from '@/components/Home/StorageCard';
 import ContentCard from '@/components/Home/ContentCard';
 import Button from '@/components/Button';
+import BlogCard from '@/components/Home/BlogCard';
+import CallToAction from '@/components/CallToAction';
 
 import Image from '../assets/progress-image.png';
 import BrandLogos from '@/components/BrandLogos';
 import PricingItem from '@/components/Home/PricingItem';
 
 import PricingContents from '@/data/pricing';
-
-console.log(PricingContents);
+import Docs from '@/data/docs';
 
 ---
 
@@ -99,14 +100,12 @@ console.log(PricingContents);
 				title="Pay as you go, upgrade" 
 				highligtText="whenever" 
 				description="To understand how Lume works, it helps to understand."
-				
 			/>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-[60px] md:gap-8 mt-[65px] md:mt-[170px]">
 
 				{PricingContents.map((item, index) => (
-				
-					
+			
 					<PricingItem 
 						key={index}
 						items={item}
@@ -117,42 +116,34 @@ console.log(PricingContents);
 		</div>
 	</section>
 
-	<section class="py-[65px] md:py-[115px] bg-[#051413]">
-		<div class="container">
-			<h2 class="text-[#F8F8F8] text-[25px] md:text-[35px] font-medium text-center">
-				Want to be a part of the next big thing?
-			</h2>
-
-			<div class="mt-7 md:mt-[50px] flex gap-3 justify-center">
-				<Button 
-					label="Learn more about Lume →" 
-					url="#" 
-				/>
-
-				<Button 
-					style="outline"
-					label="Referrals" 
-					url="#"
-				/>
-			</div>
-		</div>
-	</section>
+	<CallToAction />
 
 	<section class="py-[65px] md:py-[158px]">
 		<div class="container">
-			<div class="flex justify-between items-center">
+			<div class="lg:flex justify-between items-center">
 				<Heading 
 					align='text-left'
 					title="Docs, Updates, & Guides"
 					description="To understand how Lume keeps you safe, it helps to understand."
-			/>
+				/>
 
-			<Button 
-				label="Read our docs →" 
-				url="#" 
-				style="outline"
+				<Button 
+					label="Read our docs →" 
+					url="#" 
+					style="outline"
 				/>
 			</div>
+
+			<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 md:grid-cols-2 mt-[55px] lg:mt-0">
+				{Docs.map((item, index) => (
+					<BlogCard 
+						key={index}
+						items={item}
+					/>
+				))}
+			</div>
+
 		</div>
+	</section>
 
 </Layout>

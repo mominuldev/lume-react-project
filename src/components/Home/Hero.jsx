@@ -1,11 +1,10 @@
-import React from "react";
 import Button from "../Button";
-import HeroImage from "../../assets/hero-image.png";
-import HeroImageMobile from "../../assets/hero-mobile-image.png";
+import HeroImage from "../../assets/hero-image.svg";
+import HeroImageMobile from "../../assets/hero-mobile-image.svg";
 
 const Hero = () => {
 	return (
-		<section className="pt-11 lg:pt-10">
+		<section className="pt-11 lg:pt-[170px]">
 			<div className="container">
 				<div className="md:columns-2 sm:columns-1 lg:flex lg:items-center lg:justify-between">
 					<div className="mb-[50px] lg:mb-0">
